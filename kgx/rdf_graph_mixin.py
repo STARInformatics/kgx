@@ -189,7 +189,6 @@ class RdfGraphMixin(object):
             attr_dict = self.graph.node[n]
             self._add_attribute(attr_dict, key, value)
 
-
     def add_edge_attribute(self, subject_iri: URIRef, object_iri: URIRef, predicate_iri: URIRef, key: str, value: str) -> None:
         """
         Adds an attribute to an edge, while taking into account whether the attribute

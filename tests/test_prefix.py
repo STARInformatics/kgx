@@ -1,8 +1,4 @@
-from kgx import PandasTransformer
-from kgx import ObanRdfTransformer
 from kgx import PrefixManager
-import networkx as nx
-import logging
 
 HAS_EVIDENCE_CURIE = 'RO:0002558'
 HAS_EVIDENCE_IRI = 'http://purl.obolibrary.org/obo/RO_0002558'

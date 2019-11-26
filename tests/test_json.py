@@ -1,4 +1,5 @@
 import os
+
 from kgx import JsonTransformer
 
 cwd = os.path.abspath(os.path.dirname(__file__))

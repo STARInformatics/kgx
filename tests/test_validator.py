@@ -1,16 +1,15 @@
 import os
 
-from kgx import PandasTransformer
+import networkx as nx
+
 from kgx import ObanRdfTransformer
 from kgx import Validator
-import kgx.mapper as mapper
-import networkx as nx
-from random import random
-import logging
+
 
 def write_errors(validator):
     for e in validator.errors:
         print("E={}".format(e))
+
 
 def test_validator_rdf():
     """
@@ -26,6 +25,7 @@ def test_validator_rdf():
     write_errors(validator)
     assert validator.ok()
 
+
 def test_validator_bad():
     """
     fake test
@@ -40,6 +40,7 @@ def test_validator_bad():
     # TODO: status is True when it should be False
     assert not validator.ok()
 
+
 def test_validator_good():
     """
     fake test
@@ -49,7 +50,7 @@ def test_validator_good():
     G.add_node('UniProtKB:P123456', name='fake')
     G.add_edge('UBERON:0000001', 'UBERON:0000002', relation='RO:1', edge_label='part_of')
     validator = Validator()
-    #print("PM={}".format(validator.prefix_manager.prefixmap))
+    # print("PM={}".format(validator.prefix_manager.prefixmap))
     validator.validate(G)
     write_errors(validator)
     assert validator.ok()

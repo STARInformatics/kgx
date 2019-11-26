@@ -1,9 +1,11 @@
-from kgx import PandasTransformer
-from kgx import ObanRdfTransformer
-import kgx.mapper as mapper
-import networkx as nx
 from random import random
-import logging
+
+import networkx as nx
+
+import kgx.mapper as mapper
+from kgx import ObanRdfTransformer
+from kgx import PandasTransformer
+
 
 def test_mapping():
     """

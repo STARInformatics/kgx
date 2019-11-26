@@ -1,7 +1,7 @@
+from neo4jrestclient.client import GraphDatabase as http_gdb
+
 from kgx import NeoTransformer, PandasTransformer, JsonTransformer
 
-from neo4jrestclient.client import GraphDatabase as http_gdb, Node, Relationship
-from neo4jrestclient.query import CypherException
 
 def test_csv_to_neo_load():
     """

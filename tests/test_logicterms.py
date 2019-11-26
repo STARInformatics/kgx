@@ -1,9 +1,6 @@
-from kgx import LogicTermTransformer, ObanRdfTransformer, RdfOwlTransformer
-from rdflib import Namespace
-from rdflib.namespace import RDF
-import rdflib
-import gzip
-    
+from kgx import LogicTermTransformer
+
+
 # TODO: make this a proper test with assertions
 def save(g, outfile):
 

@@ -1,8 +1,10 @@
-from kgx import PandasTransformer
-from kgx import ObanRdfTransformer
-import networkx as nx
 from random import random
-import logging
+
+import networkx as nx
+
+from kgx import ObanRdfTransformer
+from kgx import PandasTransformer
+
 
 def test_load():
     """

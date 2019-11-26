@@ -6,6 +6,7 @@ cwd = os.path.abspath(os.path.dirname(__file__))
 resource_dir = os.path.join(cwd, 'resources')
 target_dir = os.path.join(cwd, 'target')
 
+
 def test_load():
     """
     Test for loading data into PandasTransformer
@@ -18,6 +19,7 @@ def test_load():
     t.save(os.path.join(target_dir, 'x1copy.csv'))
     # w = GraphMLTransformer(t.graph)
     # w.save(os.path.join(target_dir, "x1n.graphml"))
+
 
 def test_semmeddb_csv():
     """
@@ -40,6 +42,7 @@ def test_semmeddb_csv():
     # save output as *tar.bz2
     t.save(output, mode='w:bz2')
 
+
 def test_semmeddb_csv_to_tsv():
     """
     Read nodes and edges from CSV and export the resulting graph as an archive
@@ -54,6 +57,7 @@ def test_semmeddb_csv_to_tsv():
 
     # save output as TSV in a tar archive
     t.save(output, extension='tsv')
+
 
 def test_read_achive():
     """

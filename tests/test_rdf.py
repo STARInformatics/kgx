@@ -1,13 +1,15 @@
 import os
 
-from kgx import ObanRdfTransformer, RdfOwlTransformer, PandasTransformer, JsonTransformer
+import rdflib
 from rdflib import Namespace
 from rdflib.namespace import RDF
-import rdflib
+
+from kgx import ObanRdfTransformer, RdfOwlTransformer, PandasTransformer, JsonTransformer
 
 cwd = os.path.abspath(os.path.dirname(__file__))
 resource_dir = os.path.join(cwd, 'resources')
 target_dir = os.path.join(cwd, 'target')
+
 
 def test_load():
     """
@@ -49,6 +51,7 @@ def test_load():
     w3 = JsonTransformer(t.graph)
     w3.save(os.path.join(target_dir, "biogrid_test.json"))
 
+
 def test_owl_load():
     """
     Load a test OWL and export as JSON
@@ -66,6 +69,7 @@ def test_owl_load():
 
     jt = JsonTransformer(t.graph)
     jt.save(output_json_file)
+
 
 def test_ontology_load():
     """
